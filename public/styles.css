@@ -1,3 +1,36 @@
+body {
+	background-color: purple;
+	text-align: center;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+
 h1 {
-	color: brown;
+	color: purple;
+	background-color: white;
+	border-radius: 5px;
+	width: fit-content;
+	margin: auto;
+	padding: 5px;
+}
+
+a {
+	color: black;
+}
+
+#content {
+	width: 80%;
+	margin: auto;
+}
+
+.columns-all {
+	display: flex;
+	justify-content: space-between;
+}
+
+.columns-all section {
+	background-color: #d3d3ff;
+	flex: 1;
+	margin: 30px;
+	border-radius: 10px;
 }
