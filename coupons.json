@@ -21,7 +21,8 @@
 		"name": "Crest Toothpaste",
 		"store": {
 			"name": "CVS",
-			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+			"logo": "cvs.png"
 		},
 		"prices": ["4.00", "0.00"],
 		"deal": "Buy One, Get One Free",
@@ -48,7 +49,8 @@
 		"image": "inside-out-2.jpg",
 		"name": "Inside Out 2",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -61,7 +63,8 @@
 		"name": "Oral-B Toothbrush",
 		"store": {
 			"name": "CVS",
-			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+			"logo": "cvs.png"
 		},
 		"prices": ["15.00", "11.99"],
 		"deal": "Buy One, Get One 50% Off",
@@ -74,7 +77,8 @@
 		"image": "aleve.jpg",
 		"name": "Aleve PM",
 		"store": {
-			"name": "Walgreens"
+			"name": "Walgreens",
+			"logo": "walgreens.png"
 		},
 		"prices": ["15.00", "11.99"],
 		"deal": "Buy One, Get One 50% Off",
@@ -87,7 +91,8 @@
 		"image": "deadpool-and-wolverine.jpg",
 		"name": "Deadpool & Wolverine",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -99,7 +104,8 @@
 		"image": "despicable-me-4.jpg",
 		"name": "Despicable Me 4",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -111,7 +117,8 @@
 		"image": "dune-part-two.jpg",
 		"name": "Dune: Part Two",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -123,7 +130,8 @@
 		"image": "godzilla-x-kong-the-new-empire.jpg",
 		"name": "Godzilla x Kong: The New Empire",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -135,7 +143,8 @@
 		"image": "kung-fu-panda-4.jpg",
 		"name": "Kung Fu Panda 4",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -147,7 +156,8 @@
 		"image": "bad-boys-ride-or-die.jpg",
 		"name": "Bad Boys: Ride or Die",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -159,7 +169,8 @@
 		"image": "kingdom-of-the-planet-of-the-apes.jpg",
 		"name": "Kingdom of the Planet of the Apes",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -171,7 +182,8 @@
 		"image": "twisters.jpg",
 		"name": "Twisters",
 		"store": {
-			"name": "Prime Video"
+			"name": "Prime Video",
+			"logo": "prime-video.png"
 		},
 		"prices": ["15.00", "11.99", "10.00", "7.99"],
 		"deal": null,
@@ -184,7 +196,8 @@
 		"name": "CeraVe Hydrating Facial Cleanser",
 		"store": {
 			"name": "CVS",
-			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+			"logo": "cvs.png"
 		},
 		"prices": ["5.00", "2.99"],
 		"deal": null,
@@ -197,7 +210,8 @@
 		"name": "DayQuil/NyQuil Bundle",
 		"store": {
 			"name": "CVS",
-			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+			"logo": "cvs.png"
 		},
 		"prices": ["5.00", "2.49"],
 		"deal": "Buy One, Get One 50% Off",
@@ -211,7 +225,8 @@
 		"name": "Dove Body Wash",
 		"store": {
 			"name": "CVS",
-			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+			"logo": "cvs.png"
 		},
 		"prices": ["5.00", "2.49"],
 		"deal": "Buy One, Get One 50% Off",
@@ -225,7 +240,8 @@
 		"name": "Nature Made Vitamin C",
 		"store": {
 			"name": "CVS",
-			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+			"logo": "cvs.png"
 		},
 		"prices": ["5.00", "2.49"],
 		"deal": "Buy One, Get One 50% Off",
@@ -239,7 +255,8 @@
 		"name": "Secret Full Body Deodorant Spray",
 		"store": {
 			"name": "CVS",
-			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+			"logo": "cvs.png"
 		},
 		"prices": ["5.00", "2.49"],
 		"deal": "Buy One, Get One 50% Off",
@@ -252,7 +269,8 @@
 		"name": "Sinex Saline",
 		"store": {
 			"name": "CVS",
-			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+			"location": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.735738225325!2d-81.0330186579937!3d33.995927487776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bb29bd47bb0d%3A0x8483a80ae0f2d231!2sCVS!5e0!3m2!1sen!2sus!4v1730067276718!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+			"logo": "cvs.png"
 		},
 		"prices": ["5.00", "2.49"],
 		"deal": "Buy One, Get One 50% Off",
@@ -264,7 +282,8 @@
 		"image": "bananas.jpg",
 		"name": "Bananas",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -276,7 +295,8 @@
 		"image": "bananas.jpg",
 		"name": "Bananas",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
@@ -288,7 +308,8 @@
 		"image": "cherries.jpg",
 		"name": "Cherries",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -300,7 +321,8 @@
 		"image": "cherries.jpg",
 		"name": "Cherries",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
@@ -326,7 +348,8 @@
 		"image": "apple.png",
 		"name": "Apples",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
@@ -338,7 +361,8 @@
 		"image": "apple.png",
 		"name": "Apples",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -350,7 +374,8 @@
 		"image": "dates.jpg",
 		"name": "Dates",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -362,7 +387,8 @@
 		"image": "dates.jpg",
 		"name": "Dates",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
@@ -402,7 +428,8 @@
 		"image": "eggplants.jpg",
 		"name": "Eggplants",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -414,7 +441,8 @@
 		"image": "eggplants.jpg",
 		"name": "Eggplants",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
@@ -440,7 +468,8 @@
 		"image": "figs.webp",
 		"name": "Figs",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -452,7 +481,8 @@
 		"image": "figs.webp",
 		"name": "Figs",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
@@ -478,7 +508,8 @@
 		"image": "grapes.webp",
 		"name": "Grapes",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -490,7 +521,8 @@
 		"image": "grapes.webp",
 		"name": "Grapes",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
@@ -516,7 +548,8 @@
 		"image": "honeydew.webp",
 		"name": "Honeydew",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -528,7 +561,8 @@
 		"image": "honeydew.webp",
 		"name": "Honeydew",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
@@ -554,7 +588,8 @@
 		"image": "kiwis.jpg",
 		"name": "Kiwis",
 		"store": {
-			"name": "Walmart"
+			"name": "Walmart",
+			"logo": "walmart.webp"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "50% Off",
@@ -566,7 +601,8 @@
 		"image": "kiwis.jpg",
 		"name": "Kiwis",
 		"store": {
-			"name": "Aldi"
+			"name": "Aldi",
+			"logo": "aldi.png"
 		},
 		"prices": ["2.00", "1.00"],
 		"deal": "Buy One, Get One 50% Off",
