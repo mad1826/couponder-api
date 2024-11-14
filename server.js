@@ -652,7 +652,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/coupons', (req, res) => {
-	res.sendFile('coupons.json', { root: '.' });
+	res.send(coupons);
 });
 
 const validateCoupon = coupon => {
@@ -661,10 +661,12 @@ const validateCoupon = coupon => {
 		type: Joi.string().required(),
 		name: Joi.string().required(),
 		storeName: Joi.string().required(),
-		storeLocation: Joi.string(),
-		prices: Joi.array().min(2).max(4).required(),
+		// storeLocation: Joi.string(),
+		oldPrice: Joi.string().required(),
 		deal: Joi.string(),
-		expiresAt: Joi.string().required()
+		expiresAt: Joi.string().required(),
+		qualifyingItems: Joi.string(),
+		details: Joi.string()
 	});
 
 	return schema.validate(coupon);
@@ -697,6 +699,7 @@ app.post('/api/coupons', upload.single('img'), (req, res) => {
 
 	coupons.push(coupon);
 
+	console.log('Added');
 	res.status(200).send(coupon);
 });
 
