@@ -713,6 +713,20 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 	res.status(200).send(coupon);
 });
 
+app.delete('/api/coupons/:id', (req, res) => {
+	const id = req.params.id;
+
+	const couponIndex = coupons.findIndex(c => c._id === id);
+	if (couponIndex !== -1) {
+		const coupon = coupons.splice(couponIndex, 1)[0];
+
+		res.status(200).json(coupon);
+	}
+	else {
+		res.status(404).send(`No coupon found with id ${id}`);
+	}
+});
+
 app.get('/api/carts', (req, res) => {
 	res.send(carts);
 });
