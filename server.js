@@ -664,6 +664,7 @@ const validateCoupon = coupon => {
 		name: Joi.string().required(),
 		storeName: Joi.string().required(),
 		oldPrice: Joi.string().required(),
+		newPrice: Joi.string().required(),
 		deal: Joi.string().allow(''),
 		expiresAt: Joi.string().required(),
 		qualifyingItems: Joi.string().allow(''),
@@ -683,7 +684,7 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 		return;
 	}
 
-	const prices = [req.body.oldPrice, req.body.deal];
+	const prices = [req.body.oldPrice, req.body.newPrice];
 
 	if (req.body.type === 'entertainment') {
 		prices.push(req.body.oldRent, req.body.newRent);
@@ -698,7 +699,7 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 			location: req.body.storeLocation
 		},
 		prices,
-		deal: req.body.deal.match(/[a-zA-Z]/) ? req.body.deal : null,
+		deal: req.body.deal || null,
 		expiresAt: req.body.expiresAt,
 		qualifyingItems: req.body.qualifyingItems === '' ? undefined : [req.body.qualifyingItems],
 		details: req.body.details || undefined
