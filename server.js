@@ -633,12 +633,14 @@ const carts = [
 ];
 
 const app = express();
-app.use(cors());
 app.use(express.static('public'));
+app.use('/uploads', express.static('uploads'));
+app.use(express.json());
+app.use(cors());
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, './public/images/');
+		cb(null, `./public/images/${req.query.type}/`);
 	},
 	filename: (req, file, cb) => {
 		cb(null, file.originalname);
@@ -661,21 +663,22 @@ const validateCoupon = coupon => {
 		type: Joi.string().required(),
 		name: Joi.string().required(),
 		storeName: Joi.string().required(),
-		// storeLocation: Joi.string(),
 		oldPrice: Joi.string().required(),
-		deal: Joi.string(),
+		deal: Joi.string().allow(''),
 		expiresAt: Joi.string().required(),
-		qualifyingItems: Joi.string(),
-		details: Joi.string()
+		qualifyingItems: Joi.string().allow(''),
+		details: Joi.string().allow('')
 	});
 
+	console.log('Validing', coupon);
 	return schema.validate(coupon);
 };
 
-app.post('/api/coupons', upload.single('img'), (req, res) => {
+app.post('/api/coupons', upload.single('image'), (req, res) => {
 	const result = validateCoupon(req.body);
 
 	if (result.error) {
+		console.log('ERR', result.error.details[0].message);
 		res.status(400).send(result.error.details[0].message);
 		return;
 	}
@@ -688,9 +691,11 @@ app.post('/api/coupons', upload.single('img'), (req, res) => {
 			name: req.body.storeName,
 			location: req.body.storeLocation
 		},
-		prices: req.body.prices,
-		deal: req.body.deal,
-		expiresAt: req.body.expiresAt
+		prices: [req.body.oldPrice, req.body.deal],
+		deal: req.body.deal.match(/[a-zA-Z]/) ? req.body.deal : null,
+		expiresAt: req.body.expiresAt,
+		qualifyingItems: req.body.qualifyingItems === '' ? undefined : [req.body.qualifyingItems],
+		details: req.body.details || undefined
 	};
 
 	if (req.file) {
