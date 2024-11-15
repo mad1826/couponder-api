@@ -670,7 +670,6 @@ const validateCoupon = coupon => {
 		details: Joi.string().allow('')
 	});
 
-	console.log('Validing', coupon);
 	return schema.validate(coupon);
 };
 
@@ -678,7 +677,6 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 	const result = validateCoupon(req.body);
 
 	if (result.error) {
-		console.log('ERR', result.error.details[0].message);
 		res.status(400).send(result.error.details[0].message);
 		return;
 	}
@@ -704,7 +702,6 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 
 	coupons.push(coupon);
 
-	console.log('Added');
 	res.status(200).send(coupon);
 });
 
