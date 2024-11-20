@@ -657,6 +657,11 @@ app.get('/api/coupons', (req, res) => {
 	res.send(coupons);
 });
 
+const formatExpiresAt = str => {
+	const [, year, month, date] = str.match(/(\d{4})-(\d{2})-(\d{2})/);
+	return `${month}/${date}/${year.slice(2)}`;
+};
+
 const validateCoupon = coupon => {
 	const schema = Joi.object({ // TODO coupon and store image
 		_id: Joi.string().required(),
@@ -700,7 +705,7 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 		},
 		prices,
 		deal: req.body.deal || null,
-		expiresAt: req.body.expiresAt,
+		expiresAt: formatExpiresAt(req.body.expiresAt),
 		qualifyingItems: req.body.qualifyingItems === '' ? undefined : [req.body.qualifyingItems],
 		details: req.body.details || undefined
 	};
