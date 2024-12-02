@@ -734,10 +734,11 @@ app.delete('/api/coupons/:id', (req, res) => {
 });
 
 app.put('/api/coupons/:id', upload.single('image'), (req, res) => {
-	const coupon = coupons.find(coupon => coupon._id === req.params.id);
+	const id = req.params.id;
+	const coupon = coupons.find(coupon => coupon._id === id);
 
 	if (!coupon) {
-		res.status(404).send('No coupon was found with that id');
+		res.status(404).send(`No coupon was found with the id "${id}" out of ${coupons.length} coupons`);
 		return;
 	}
 
