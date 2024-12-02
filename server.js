@@ -733,6 +733,45 @@ app.delete('/api/coupons/:id', (req, res) => {
 	}
 });
 
+app.put('/api/coupons/:id', upload.single('image'), (req, res) => {
+	const coupon = coupons.find(coupon => coupon._id === req.params.id);
+
+	if (!coupon) {
+		res.status(404).send('No coupon was found with that id');
+		return;
+	}
+
+	const result = validateCoupon(req.body);
+
+	if (result.error) {
+		res.status(400).send(result.error.details[0].message);
+		return;
+	}
+
+	const prices = [req.body.oldPrice, req.body.newPrice];
+
+	if (req.body.type === 'entertainment') {
+		prices.push(req.body.oldRent, req.body.newRent);
+	}
+
+	coupon.name = req.body.name;
+	coupon.store = {
+		name: req.body.storeName,
+		location: req.body.storeLocation
+	};
+	coupon.prices = prices;
+	coupon.deal = req.body.deal || null;
+	coupon.expiresAt = formatExpiresAt(req.body.expiresAt);
+	coupon.qualifyingItems = req.body.qualifyingItems === '' ? undefined : [req.body.qualifyingItems];
+	coupon.details = req.body.details || undefined;
+
+	if (req.file) {
+		coupon.image = req.file.filename;
+	}
+
+	res.status(200).send(coupon);
+});
+
 app.get('/api/carts', (req, res) => {
 	res.send(carts);
 });
