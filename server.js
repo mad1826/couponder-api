@@ -683,7 +683,6 @@ const validateCoupon = coupon => {
 
 const validateEditedCoupon = coupon => {
 	const schema = Joi.object({
-		_id: Joi.string().required(),
 		name: Joi.string().required(),
 		storeName: Joi.string().required(),
 		oldPrice: Joi.string().required(),
