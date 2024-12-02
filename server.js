@@ -663,9 +663,27 @@ const formatExpiresAt = str => {
 };
 
 const validateCoupon = coupon => {
-	const schema = Joi.object({ // TODO coupon and store image
+	const schema = Joi.object({
 		_id: Joi.string().required(),
 		type: Joi.string().required(),
+		name: Joi.string().required(),
+		storeName: Joi.string().required(),
+		oldPrice: Joi.string().required(),
+		newPrice: Joi.string().required(),
+		deal: Joi.string().allow(''),
+		expiresAt: Joi.string().required(),
+		qualifyingItems: Joi.string().allow(''),
+		details: Joi.string().allow(''),
+		oldRent: Joi.string().allow(''),
+		newRent: Joi.string().allow('')
+	});
+
+	return schema.validate(coupon);
+};
+
+const validateEditedCoupon = coupon => {
+	const schema = Joi.object({
+		_id: Joi.string().required(),
 		name: Joi.string().required(),
 		storeName: Joi.string().required(),
 		oldPrice: Joi.string().required(),
@@ -722,7 +740,7 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 app.delete('/api/coupons/:id', (req, res) => {
 	const id = req.params.id;
 
-	const couponIndex = coupons.findIndex(c => c._id === id);
+	const couponIndex = coupons.findIndex(c => c._id === parseInt(id));
 	if (couponIndex !== -1) {
 		const coupon = coupons.splice(couponIndex, 1)[0];
 
@@ -735,14 +753,14 @@ app.delete('/api/coupons/:id', (req, res) => {
 
 app.put('/api/coupons/:id', upload.single('image'), (req, res) => {
 	const id = req.params.id;
-	const coupon = coupons.find(coupon => coupon._id === id);
+	const coupon = coupons.find(coupon => coupon._id === parseInt(id));
 
 	if (!coupon) {
 		res.status(404).send(`No coupon was found with the id "${id}" out of ${coupons.length} coupons`);
 		return;
 	}
 
-	const result = validateCoupon(req.body);
+	const result = validateEditedCoupon(req.body);
 
 	if (result.error) {
 		res.status(400).send(result.error.details[0].message);
