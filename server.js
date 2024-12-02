@@ -768,7 +768,7 @@ app.put('/api/coupons/:id', upload.single('image'), (req, res) => {
 
 	const prices = [req.body.oldPrice, req.body.newPrice];
 
-	if (req.body.type === 'entertainment') {
+	if (coupon.type === 'entertainment') {
 		prices.push(req.body.oldRent, req.body.newRent);
 	}
 
