@@ -2,6 +2,36 @@ const express = require('express');
 const cors = require('cors');
 const multer = require('multer');
 const Joi = require('joi');
+const mongoose = require('mongoose');
+
+mongoose
+	.connect('mongodb+srv://me:OlylyA2sSizqGe5N@cluster0.xhgb6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+	.then(() => {
+		console.log('Connected to MongoDB');
+	})
+	.catch(err => {
+		console.error('Unable to connect to MongoDB', err);
+	});
+
+const storeSchema = new mongoose.Schema({
+	name: String,
+	logo: String,
+	location: String
+});
+
+const couponSchema = new mongoose.Schema({
+	type: String,
+	image: String,
+	name: String,
+	store: storeSchema,
+	prices: [String],
+	deal: String,
+	expireAt: String,
+	details: String,
+	qualifyingItems: [String]
+});
+
+const Coupon = mongoose.model('Coupon', couponSchema);
 
 const coupons = [
 	{
@@ -653,8 +683,9 @@ app.get('/', (req, res) => {
 	res.json(coupons);
 });
 
-app.get('/api/coupons', (req, res) => {
-	res.send(coupons);
+app.get('/api/coupons', async (req, res) => {
+	const allCoupons = await Coupon.find();
+	res.json(allCoupons);
 });
 
 const formatExpiresAt = str => {
@@ -698,7 +729,7 @@ const validateEditedCoupon = coupon => {
 	return schema.validate(coupon);
 };
 
-app.post('/api/coupons', upload.single('image'), (req, res) => {
+app.post('/api/coupons', upload.single('image'), async (req, res) => {
 	const result = validateCoupon(req.body);
 
 	if (result.error) {
@@ -712,9 +743,50 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 		prices.push(req.body.oldRent, req.body.newRent);
 	}
 
-	const coupon = {
-		_id: req.body._id,
+	const coupon = new Coupon({
 		type: req.body.type,
+		name: req.body.name,
+		store: {
+			name: req.body.storeName,
+			location: req.body.storeLocation
+		},
+		prices,
+		deal: req.body.deal || null,
+		expiresAt: formatExpiresAt(req.body.expiresAt),
+		qualifyingItems: req.body.qualifyingItems === '' ? undefined : [req.body.qualifyingItems],
+		details: req.body.details || undefined
+	});
+
+	if (req.file) {
+		coupon.image = req.file.filename;
+	}
+
+	const newCoupon = await coupon.save();
+
+	res.status(200).send(newCoupon);
+});
+
+app.delete('/api/coupons/:id', async (req, res) => {
+	const coupon = await Coupon.findByIdAndDelete(req.params.id);
+
+	res.status(200).send(coupon);
+});
+
+app.put('/api/coupons/:id', upload.single('image'), async (req, res) => {
+	const result = validateEditedCoupon(req.body);
+
+	if (result.error) {
+		res.status(400).send(result.error.details[0].message);
+		return;
+	}
+
+	const prices = [req.body.oldPrice, req.body.newPrice];
+
+	if (req.body.oldRent) {
+		prices.push(req.body.oldRent, req.body.newRent);
+	}
+
+	const fieldsToUpdate = {
 		name: req.body.name,
 		store: {
 			name: req.body.storeName,
@@ -728,66 +800,14 @@ app.post('/api/coupons', upload.single('image'), (req, res) => {
 	};
 
 	if (req.file) {
-		coupon.image = req.file.filename;
+		fieldsToUpdate.image = req.file.filename;
 	}
 
-	coupons.push(coupon);
+	await Coupon.updateOne({ _id: req.params.id }, fieldsToUpdate);
 
-	res.status(200).send(coupon);
-});
+	const newCoupon = await Coupon.findOne({ _id: req.params.id });
 
-app.delete('/api/coupons/:id', (req, res) => {
-	const id = req.params.id;
-
-	const couponIndex = coupons.findIndex(c => c._id === parseInt(id));
-	if (couponIndex !== -1) {
-		const coupon = coupons.splice(couponIndex, 1)[0];
-
-		res.status(200).json(coupon);
-	}
-	else {
-		res.status(404).send(`No coupon found with id ${id}`);
-	}
-});
-
-app.put('/api/coupons/:id', upload.single('image'), (req, res) => {
-	const id = req.params.id;
-	const coupon = coupons.find(coupon => coupon._id === parseInt(id));
-
-	if (!coupon) {
-		res.status(404).send(`No coupon was found with the id "${id}" out of ${coupons.length} coupons`);
-		return;
-	}
-
-	const result = validateEditedCoupon(req.body);
-
-	if (result.error) {
-		res.status(400).send(result.error.details[0].message);
-		return;
-	}
-
-	const prices = [req.body.oldPrice, req.body.newPrice];
-
-	if (coupon.type === 'entertainment') {
-		prices.push(req.body.oldRent, req.body.newRent);
-	}
-
-	coupon.name = req.body.name;
-	coupon.store = {
-		name: req.body.storeName,
-		location: req.body.storeLocation
-	};
-	coupon.prices = prices;
-	coupon.deal = req.body.deal || null;
-	coupon.expiresAt = formatExpiresAt(req.body.expiresAt);
-	coupon.qualifyingItems = req.body.qualifyingItems === '' ? undefined : [req.body.qualifyingItems];
-	coupon.details = req.body.details || undefined;
-
-	if (req.file) {
-		coupon.image = req.file.filename;
-	}
-
-	res.status(200).send(coupon);
+	res.status(200).send(newCoupon);
 });
 
 app.get('/api/carts', (req, res) => {
