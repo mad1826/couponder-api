@@ -26,7 +26,7 @@ const couponSchema = new mongoose.Schema({
 	store: storeSchema,
 	prices: [String],
 	deal: String,
-	expireAt: String,
+	expiresAt: String,
 	details: String,
 	qualifyingItems: [String]
 });
