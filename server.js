@@ -5,7 +5,7 @@ const Joi = require('joi');
 const mongoose = require('mongoose');
 
 mongoose
-	.connect('mongodb+srv://me:OlylyA2sSizqGe5N@cluster0.xhgb6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+	.connect(process.env.MONGO)
 	.then(() => {
 		console.log('Connected to MongoDB');
 	})
